@@ -16,23 +16,17 @@ public class BallController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        //シーン中のGameOverTextオブジェクトを取得
-        this.GameOverText = GameObject.Find("GameOverText");
+    {        
+        this.GameOverText = GameObject.Find("GameOverText");//シーン中のGameOverTextオブジェクトを取得
     }
 
     // Update is called once per frame
     void Update()
-    {
-        //ボールが画面外に出た場合
-        if (this.transform.position.z < this.visiblePosZ)
+    { 
+        if (this.transform.position.z < this.visiblePosZ)//ボールが画面外に出た場合
         {
-            //GameoverTextにゲームオーバを表示
-            this.GameOverText.GetComponent<Text>().text = "Game Over";
+            this.GameOverText.GetComponent<Text>().text = "Game Over";//GameoverTextにゲームオーバを表示            
         }
-
-        
-
     }
 
 
